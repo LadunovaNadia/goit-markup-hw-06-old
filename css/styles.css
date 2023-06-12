@@ -615,6 +615,14 @@ text-align: center;
 /*===================/FOOTER======================*/
 
 /*===================MODAL======================*/
+.input-label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--customers-col);
+    display: block;
+    margin-bottom: 4px; 
+}
 .modal-field {
     margin-bottom: 8px;
 }
