@@ -750,7 +750,6 @@ color: #8E8F99;
 }
 
 .check-text span {
-display: inline-flex;
 width: 16px;
 height: 16px;
 border: 1px solid rgba(46, 47, 66, 0.4);
@@ -765,6 +764,10 @@ fill: transparent;
     background-color: #404BBF;
     border: none;
     fill: #F4F4FD;
+}
+
+.modal-form-checkbox {
+    display: inline-flex;
 }
 
 .modal-form-checkbox {
