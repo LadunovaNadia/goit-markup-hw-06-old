@@ -545,9 +545,7 @@ text-align: center;
     align-items: baseline;
 }
 
-.subscribe-cont {
-    margin-left: 80px;
-}
+
 
 .backdrop {
     background-color: rgba(46, 47, 66, 0.4);
@@ -569,8 +567,7 @@ text-align: center;
     min-height: 584px;
     background-color: #FCFCFC;
     border-radius: 4px;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 72px 24px 24px 24px;
 }
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(0);
@@ -620,8 +617,15 @@ text-align: center;
 /*===================/FOOTER======================*/
 
 /*===================MODAL======================*/
+.modal-field {
+    margin-bottom: 8px;
+}
+
+.modal-form-div {
+    margin-bottom: 8px; 
+}
 .modal-title {
-    font-weight: var(--font-weith-top);
+font-weight: var(--font-weith-top);
 font-size: 16px;
 line-height: 1.50;  
 text-align: center;
@@ -629,11 +633,8 @@ letter-spacing: 0.02em;
 color: var(--navy-blue);
 margin-bottom: 16px;
 margin-left: auto;
-padding-top: 72px;
 }
-.input-label {
-    height: 58px;
-}
+
 .modal-input {
     width: 100%;
     height: 40px;
@@ -643,46 +644,62 @@ padding-top: 72px;
     color: var(--navy-blue);
     outline: transparent;
     padding-left: 38px;
+    background-color: transparent; 
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-input:focus {
+
+.modal-comment:focus {
     border-color: #4D5AE5;
 }
 
 .modal-input:focus + .modal-icon {
     fill: #4D5AE5;
 }
+.modal-input:focus {
+    border-color: #4D5AE5;
+}
+
 .modal-input::placeholder, 
 .modal-comment::placeholder {
     font-size: 12px;
     color: rgba(46, 47, 66, 0.4);
 }
+
 .modal-comment {
 width: 100%;
 height: 120px;
-padding-left: 16px;
-padding-top: 8px;
+padding: 8px 16px;
 border: 1px solid rgba(46, 47, 66, 0.4);
 border-radius: 4px;
 color: var(--navy-blue);
 resize: none;
 outline: transparent;
+font-size: 12px;
+line-height: 1.17;
+letter-spacing: 0.04em;
+color: rgba(46, 47, 66, 0.4);
+border: 1px solid rgba(46, 47, 66, 0.4);
+border-radius: 4px;
+background-color: transparent;
+outline: transparent; 
+resize: none;
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .input-comment {
-    font-weight: 400;
+font-weight: 400;
 font-size: 12px;
 line-height: 1.16; 
 letter-spacing: 0.01em;
 color: #8E8F99;
 }
+
 .model-form-input-desc {
-display: inline-flex;
 font-weight: var(--font-weith-low);
 font-size: 12px;
 line-height: 1.16; 
 letter-spacing: 0.04em;
 color: #8E8F99;
-margin-bottom: 4px;
 }
 
 .modal-comment:focus {
@@ -690,30 +707,42 @@ margin-bottom: 4px;
 }
 
 .modal-icon {
+    width: 18px;
+    height: 24px;
     position: absolute;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .input-wrap {
     position: relative;
 }
 
-.modal-field {
-    margin-bottom: 8px;
+.modal-field-div {
+    margin-bottom: 16px;
+}
+
+.modal-field-privacy {
+    margin-bottom: 24px;
+}
+
+.link-privacy {
+    color: var(--iris);
 }
 /*===================checkbox======================*/
 
 .check-text {
     font-weight: var(--font-weith-low);
     font-size: 12px;
-    line-height: 1.16;  
+    line-height: 1.17;  
     letter-spacing: 0.04em;
-    color: #8E8F99;
+    color: var(--customers-col);
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    line-height: 1.17; 
 }
 
 .check-text span {
@@ -726,7 +755,6 @@ display: inline-flex;
 align-items: center;
 justify-content: center;
 fill: transparent;
-
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -736,53 +764,13 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cu
     fill: #F4F4FD;
 }
 
-
-/*===================Subscribe======================*/
-.subscribe-text {
-font-weight: var(--font-weith-top);
-font-size: 16px;
-line-height: 1.50;
-letter-spacing: 0.02em;
-color: #FFFFFF;
-margin-bottom: 16px;
+.modal-form-checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4); 
+    border-radius: 2px; 
 }
 
-.subscribe-email-btn {
-width: 264px;
-height: 40px;
-border: 1px solid #FFFFFF;
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-border-radius: 4px;
-font-weight: var(--font-weith-low);
-font-size: 12px;
-line-height: 2;
-letter-spacing: 0.04em;
-color: #FFFFFF;
-} 
-
-.send-subscribe {
-    display: inline-flex;
-    justify-content: center;
-    position: absolute;
-    margin-left: 24px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 165px;
-    height: 40px;
-    background: #4D5AE5;
-    border-radius: 4px;
-    padding: 8px 24px;
-    gap: 16px;
-    color: #FFFFFF;
-    border-style: none;
-    fill: #FFFFFF;
-}
-
-
-.btn-span {
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 .modal-form-submit {
     display: block;
     margin: 0 auto;
@@ -808,7 +796,69 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cu
     color: var(--hover);
 }
 
-/*===================/MODAL======================*/
+/*===================Subscribe======================*/
+.subscribe-cont {
+margin-left: 80px;
+}
+
+.form-sbsc {
+    display: flex;
+    gap: 24px;
+}
+
+.subscribe-text {
+font-weight: var(--font-weith-top);
+font-size: 16px;
+line-height: 1.50;
+letter-spacing: 0.02em;
+color: #FFFFFF;
+margin-bottom: 16px;
+}
+
+.subscribe-email-btn {
+padding-left: 16px;
+line-height: 1.5;
+background-color: transparent;
+width: 264px;
+height: 40px;
+border: 1px solid #FFFFFF;
+border-radius: 4px;
+font-weight: var(--font-weith-low);
+font-size: 12px;
+line-height: 1.5;
+letter-spacing: 0.04em;
+color: #FFFFFF;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+} 
+
+.send-subscribe {
+    min-width: 165px;
+    display: flex;
+    justify-content: center;
+    margin-left: 24px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 165px;
+    height: 40px;
+    background: #4D5AE5;
+    border-radius: 4px;
+    padding: 8px 24px;
+    gap: 16px;
+    color: #FFFFFF;
+    fill: #FFFFFF;
+    font-weight: var(--font-weith-top);
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    
+}
+
+.btn-subscribe-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
+}
 
 /*===============PORTFOLIO MAIN SECTION==================*/
 .main-portfolio {
